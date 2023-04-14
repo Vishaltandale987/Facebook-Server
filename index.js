@@ -6,8 +6,6 @@ const { connection } = require("./config/db");
 const { userrouter } = require("./routes/user.route");
 // const { auth } = require("./middlewares/authentication.middleware");
 require("dotenv").config();
-const swaggerjsdoc = require("swagger-jsdoc");
-const swaggerUI = require("swagger-ui-express");
 const { postrouter } = require("./routes/post.route");
 
 let app = express();
