@@ -97,7 +97,7 @@ postrouter.get("/:id", async (req, res) => {
 postrouter.get("/userpost/:id", async (req, res) => {
   try {
     const post = await Post.find({userId:req.params.id});
-    res.status(200).json(post);
+    res.status(200).json(post.reverse());
   } catch (err) {
     res.status(500).json(err);
   }
