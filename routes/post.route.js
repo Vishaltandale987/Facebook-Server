@@ -8,7 +8,7 @@ const postrouter = express.Router();
 postrouter.get("/", async (req, res) => {
     try {
       const notes = await Post.find();
-      res.send(notes);
+      res.send(notes.reverse());
     } catch (error) {
       console.log(error)
     }
